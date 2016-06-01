@@ -7,7 +7,10 @@
 var Marked = require('marked'),
     Cheerio = require('cheerio'),
     extend = require('util')._extend,
-    mdextract = require('mdextract');
+    mdextract = require('mdextract'),
+    deasync = require('deasync'),
+    tidy = require('htmltidy2').tidy,
+    escape = require('escape-html');
 
 module.exports = Styledown;
 
